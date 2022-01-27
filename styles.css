@@ -10,33 +10,89 @@
   width: 100%;
   height: 600px;
   background: #cdcdcd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.content1 .contents * {
+  font-size: 20px;
+}
+.content1 *.list-title {
+  color: #222;
+  font-weight: bold;
+  font-size: 30px;
+  padding-bottom: 5px;
+}
+.content1 h2.list-title {
+  color: #222;
+  font-weight: bold;
+  font-size: 50px;
+  padding-bottom: 10px;
+}
+
+.content1 li:nth-last-child(1) {
+  padding-bottom: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
 }
 
 body {
   height: 100vh;
   width: 100vw;
-  margin: 0;
-  padding: 0;
   font-family: "Roboto", sans-serif;
 }
 
+ul.contents * {
+  text-decoration: none;
+  text-align: center;
+  color: #111;
+  list-style: none;
+}
+
+ul.contents *.contents-link {
+  text-decoration: none;
+  color: #111;
+}
+
+ul.contents *.contents-link::after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  padding-top: 0px;
+  border-bottom: 1px solid #111;
+  width: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+ul.contents *.contents-link:hover::after {
+  width: 100%;
+}
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   text-align: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   color: #ffffff;
+  padding: 10px;
 }
 
+footer * {
+  margin: 5px 0 5px 0;
+}
 footer .links {
   font-size: 25px;
-  padding-bottom: 10px;
 }
 
 footer .links a {
@@ -65,8 +121,8 @@ footer .links .fa-tiktok:hover {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: 100vw;
   background-image: linear-gradient(-45deg, #ffd35b, #ff8a5b, #e73b83);
 }
@@ -77,8 +133,8 @@ footer .links .fa-tiktok:hover {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   text-align: center;
 }
 
@@ -87,8 +143,8 @@ footer .links .fa-tiktok:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   background: rgba(0, 0, 0, 0.2);
   width: 100vw;
   top: 0;
@@ -104,6 +160,9 @@ footer .links .fa-tiktok:hover {
 .navbar .item a:hover:after {
   width: 50px;
 }
+.navbar .item.active a:hover:after {
+  width: 0;
+}
 
 .navbar .item a:after {
   content: "";
@@ -116,9 +175,18 @@ footer .links .fa-tiktok:hover {
   transition: 1s;
 }
 
+.navbar .item.active {
+  background: rgba(0, 0, 0, 0.3);
+  cursor: default;
+}
+
 .navbar .item:hover {
   background: rgba(0, 0, 0, 0.3);
   cursor: pointer;
+}
+.navbar .item.active:hover {
+  background: rgba(0, 0, 0, 0.3);
+  cursor: default;
 }
 
 .navbar .item a {
@@ -131,11 +199,11 @@ footer .links .fa-tiktok:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 150px;
 }
 
@@ -174,8 +242,8 @@ h1 {
     z-index: 2;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-transition: 1s ease-in-out;
     transition: 1s ease-in-out;
   }

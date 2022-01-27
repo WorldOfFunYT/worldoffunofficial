@@ -22,14 +22,67 @@ $ff-primary: "Roboto", sans-serif;
   width: 100%;
   height: 600px;
   background: #cdcdcd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .contents {
+    * {
+      font-size: 20px;
+    }
+  }
+  *.list-title {
+    color: #222;
+    font-weight: bold;
+    font-size: 30px;
+    padding-bottom: 5px;
+  }
+  h2.list-title {
+    color: #222;
+    font-weight: bold;
+    font-size: 50px;
+    padding-bottom: 10px;
+  }
+  li:nth-last-child(1) {
+    padding-bottom: 10px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
 }
 
 body {
   height: 100vh;
   width: 100vw;
-  margin: 0;
-  padding: 0;
   font-family: $ff-primary;
+}
+
+ul.contents {
+  * {
+    text-decoration: none;
+    text-align: center;
+    color: #111;
+    list-style: none;
+  }
+  *.contents-link {
+    text-decoration: none;
+    color: #111;
+  }
+  *.contents-link::after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    padding-top: 0px;
+    border-bottom: 1px solid #111;
+    width: 0;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  *.contents-link:hover::after {
+    width: 100%;
+  }
 }
 
 footer {
@@ -38,9 +91,12 @@ footer {
   text-align: center;
   justify-content: center;
   color: $clr-text-footer;
+  padding: 10px;
+  * {
+    margin: 5px 0 5px 0;
+  }
   .links {
     font-size: 25px;
-    padding-bottom: 10px;
     a {
       text-decoration: none;
       color: white;
@@ -48,13 +104,13 @@ footer {
       transition: 0.5s;
     }
     .fa-youtube:hover {
-      color: rgb(194, 63, 63);
+      color: #c23f3f;
     }
     .fa-twitter:hover {
-      color: rgb(74, 188, 223);
+      color: #4abcdf;
     }
     .fa-tiktok:hover {
-      color: rgb(54, 51, 221);
+      color: #3633dd;
     }
   }
 }
