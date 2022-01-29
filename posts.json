@@ -1,0 +1,12 @@
+{
+  "Posts": [
+    {
+      "title": "About me",
+      "author": "Szymon",
+      "img": "https://source.unsplash.com/random/500x500",
+      "pubDate": "Sat 29 Janurary 2022",
+      "pubTime": "11:30 GMT",
+      "content": "Hi, my name is Szymon, I am 11 years old and I have a youtube channel. I like to code, make music and occasionally play video games."
+    }
+  ]
+}

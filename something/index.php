@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Home</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <title>About Me</title>
   </head>
   <body>
     <div class="wrapper">
@@ -19,8 +19,8 @@
                   aria-hidden="true"
                   onclick="hideMenu()"
                 ></i>
-                <div class="item active"><a href="../index.html">Home</a></div>
-                <div class="item"><a href="about/index.html">About</a></div>
+                <div class="item"><a href="../index.html">Home</a></div>
+                <div class="item active"><a href="#">About</a></div>
               </div>
             </div>
             <i class="fas fa-bars" aria-hidden="true" onclick="showMenu()"></i>
@@ -30,10 +30,7 @@
           </nav>
         </div>
       </header>
-      <section class="content1">
-        Website in progress. Nothing to see here!
-        <div id="myData"></div>
-      </section>
+      <section class="content1">About me page! WIP</section>
       <footer class="bg-gradient">
         <p class="footer">
           Copyright © 2022 World of Fun.<br />
@@ -53,7 +50,7 @@
       </footer>
     </div>
   </body>
-  <script src="script.js"></script>
+  <script src="../script.js"></script>
   <script
     src="https://kit.fontawesome.com/9380750796.js"
     crossorigin="anonymous"
