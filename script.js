@@ -8,7 +8,7 @@ fetch("header.html")
     eval(doc.querySelector("script").textContent);
   });
 
-const footer = document.querySelector("#footer");
+const footer = document.getElementById("#footer");
 fetch("footer.html")
   .then((res) => res.text())
   .then((data) => {
