@@ -167,7 +167,8 @@ footer .links .fa-tiktok:hover {
   -ms-flex-direction: column;
   flex-direction: column;
   width: 100vw;
-  background-image: linear-gradient(-45deg, #ffd35b, #ff8a5b, #e73b83);
+  background-image: -webkit-gradient(linear, right top, left top, from(#ffd35b), color-stop(#ff8a5b), to(#e73b83));
+  background-image: linear-gradient(270deg, #ffd35b, #ff8a5b, #e73b83);
 }
 
 .navbar {
@@ -188,7 +189,7 @@ footer .links .fa-tiktok:hover {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.1);
   width: 100vw;
   top: 0;
   -webkit-transition: 1s;
@@ -218,22 +219,8 @@ footer .links .fa-tiktok:hover {
 }
 
 .navbar .item:hover {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.2);
   cursor: pointer;
-}
-
-.navbar .item.active {
-  background: rgba(0, 0, 0, 0.3);
-  cursor: default;
-}
-
-.navbar .item.active a:hover:after {
-  width: 0;
-}
-
-.navbar .item.active:hover {
-  background: rgba(0, 0, 0, 0.3);
-  cursor: default;
 }
 
 .title {

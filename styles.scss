@@ -156,7 +156,7 @@ footer {
   flex-direction: column;
   width: 100vw;
   background-image: linear-gradient(
-    -45deg,
+    270deg,
     $clr-gradient-1,
     $clr-gradient-2,
     $clr-gradient-3
@@ -178,7 +178,7 @@ footer {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.1);
     width: 100vw;
     top: 0;
     -webkit-transition: 1s;
@@ -205,23 +205,8 @@ footer {
       }
     }
     &:hover {
-      background: rgba(0, 0, 0, 0.3);
+      background: rgba(0, 0, 0, 0.2);
       cursor: pointer;
-    }
-  }
-  .item.active {
-    a {
-      &:hover {
-        &:after {
-          width: 0;
-        }
-      }
-    }
-    background: rgba(0, 0, 0, 0.3);
-    cursor: default;
-    &:hover {
-      background: rgba(0, 0, 0, 0.3);
-      cursor: default;
     }
   }
 }
