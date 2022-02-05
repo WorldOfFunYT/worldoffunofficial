@@ -21,29 +21,50 @@ function showMenu() {
 function hideMenu() {
   navLinks.style.right = "-200px";
 }
-function showAboutPost() {
-  var postId = 0;
-  var postBox = document.getElementById("postbox");
-  fetch("posts.json")
+
+function findByKey(key, value) {
+  return (item, i) => item[key] === value;
+}
+
+var postdata = getPosts("title", "another title");
+postdata.then((value) => {
+  console.log(value, "hi");
+});
+
+function getPosts(param, val) {
+  return fetch("posts.json")
     .then((response) => response.json())
     .then((data) => {
-      console.log(data.Posts);
-      postBox.innerHTML =
-        "<h2>" +
-        data.Posts[postId].title +
-        "</h2>" +
-        "<p>By " +
-        data.Posts[postId].author +
-        "</p>" +
-        "<p>Posted on " +
-        data.Posts[postId].pubDate +
-        " at " +
-        data.Posts[postId].pubTime +
-        "</p>" +
-        '<img class="pfp" src="' +
-        data.Posts[postId].img +
-        '" alt=""/><div class="txt-box"><p>' +
-        data.Posts[postId].content +
-        "</p></div>";
+      var postdata = data.Posts;
+      console.log(postdata);
+      let findParams = findByKey(param, val);
+      let index = postdata.findIndex(findParams);
+      return postdata;
     });
 }
+// function showAboutPost() {
+//   var postId = 0;
+//   var postBox = document.getElementById("postbox");
+//   fetch("posts.json")
+//     .then((response) => response.json())
+//     .then((data) => {
+//       console.log(data.Posts);
+//       postBox.innerHTML =
+//         "<h2>" +
+//         data.Posts[postId].title +
+//         "</h2>" +
+//         "<p>By " +
+//         data.Posts[postId].author +
+//         "</p>" +
+//         "<p>Posted on " +
+//         data.Posts[postId].pubDate +
+//         " at " +
+//         data.Posts[postId].pubTime +
+//         "</p>" +
+//         '<img class="pfp" src="' +
+//         data.Posts[postId].img +
+//         '" alt=""/><div class="txt-box"><p>' +
+//         data.Posts[postId].content +
+//         "</p></div>";
+//     });
+// }

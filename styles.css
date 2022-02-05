@@ -7,7 +7,7 @@
 }
 
 .content1 {
-  min-height: 514px;
+  min-height: 68.5vh;
   padding: 50px;
   background: #cdcdcd;
   display: -webkit-box;
@@ -171,73 +171,82 @@ footer .links .fa-tiktok:hover {
   background-image: linear-gradient(270deg, #ffd35b, #ff8a5b, #e73b83);
 }
 
-.navbar {
+.nav {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav .title {
+  white-space: nowrap;
+  margin-right: auto;
+  font-size: 30px;
+  padding: 20px 0;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+}
+
+.nav .title img {
+  width: 40px;
+}
+
+.nav .title * {
+  margin: 0 10px 0 15px;
+}
+
+.nav .items {
+  width: 100%;
+  position: relative;
+  right: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  text-align: center;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
-.navbar .item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  background: rgba(0, 0, 0, 0.1);
-  width: 100vw;
-  top: 0;
-  -webkit-transition: 1s;
-  transition: 1s;
-}
-
-.navbar .item a {
-  padding: 15px 0 15px 0;
-  width: 100%;
-  text-decoration: none;
+.nav .items * {
   color: #ffffff;
+  text-decoration: none;
 }
 
-.navbar .item a:hover:after {
-  width: 50px;
-}
-
-.navbar .item a:after {
-  content: "";
-  display: block;
-  margin: 0 auto;
-  padding-top: 2px;
-  border-bottom: 1px solid #ffffff;
-  width: 0;
-  -webkit-transition: 1s;
-  transition: 1s;
-}
-
-.navbar .item:hover {
-  background: rgba(0, 0, 0, 0.2);
-  cursor: pointer;
+.nav .items .item {
+  right: 0;
+  display: inline-block;
+  width: 120px;
+  font-size: 20px;
 }
 
 .title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 150px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 h1 {
-  font-size: 60px;
+  font-size: 30px;
   color: #ffffff;
 }
 
@@ -257,10 +266,14 @@ h1 {
     display: block;
     color: #ffffff;
     margin: 10px;
-    font-size: 22px;
+    font-size: 25px;
     cursor: pointer;
   }
-  .navbar {
+  .nav .title {
+    padding: 15px 0;
+    font-size: 30px;
+  }
+  #navLinks {
     background: #ffc65b;
     position: absolute;
     height: 100vh;
@@ -271,24 +284,36 @@ h1 {
     z-index: 2;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     -webkit-transition: 1s ease-in-out;
     transition: 1s ease-in-out;
   }
-  .navbar .item {
-    width: 100%;
-    padding: 10px 0 10px 20px;
+  #navLinks .fa-times {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin: 10px;
+  }
+  #navLinks .item {
+    width: auto;
+    margin: 20px;
     background: rgba(0, 0, 0, 0);
   }
-  .navbar .item a:hover:after {
+  #navLinks .item a:hover:after {
     width: 0;
   }
-  .navbar .item:hover {
+  #navLinks .item:hover {
     background: rgba(0, 0, 0, 0);
   }
   h1 {
-    font-size: 40px;
+    font-size: 20px;
   }
   body {
     overflow-x: hidden;

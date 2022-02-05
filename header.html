@@ -1,28 +1,47 @@
 <div class="bg-gradient">
-  <nav>
-    <div class="nav">
-      <div class="navbar" id="navLinks">
-        <i
-          id="hideMenu"
-          class="fas fa-times"
-          aria-hidden="true"
-          onclick="hideMenu()"
-        ></i>
+  <!-- <div class="nav">
+    <div class="navbar" id="navLinks">
+      <div class="title">
+        <img src="images/logo.png" alt="" />
+        World of Fun
+      </div>
+      <i
+        id="hideMenu"
+        class="fas fa-times"
+        aria-hidden="true"
+        onclick="hideMenu()"
+      ></i>
+      <div class="items">
         <div class="item"><a href="index.html">Home</a></div>
         <div class="item"><a href="about.html">About</a></div>
       </div>
     </div>
-    <i
-      id="showMenu"
-      class="fas fa-bars"
-      aria-hidden="true"
-      onclick="showMenu()"
-    ></i>
-    <div class="title">
-      <h1>World of Fun</h1>
+  </div> -->
+  <div class="nav">
+    <a class="title" href="index.html">
+      <img src="images/logo.png" alt="" />
+      World of Fun
+    </a>
+    <div class="items" id="navLinks">
+      <i
+        id="hideMenu"
+        class="fas fa-times"
+        aria-hidden="true"
+        onclick="hideMenu()"
+      ></i>
+
+      <div class="item"><a href="about.html">About</a></div>
     </div>
-  </nav>
+  </div>
+  <i
+    id="showMenu"
+    class="fas fa-bars"
+    aria-hidden="true"
+    onclick="showMenu()"
+  ></i>
 </div>
 <script type="text/javascript">
-  var navLinks = document.querySelectorAll(".nav .navbar#navLinks");
+  var navLinks = document.querySelectorAll(
+    ".header .bg-gradient .nav .items#navLinks"
+  );
 </script>
